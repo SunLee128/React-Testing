@@ -1,19 +1,20 @@
 import React from 'react';
 import  { shallow } from 'enzyme'
-import ReactDOM from 'react-dom'
-import { render } from '@testing-library/react';
-import App from '../App';
-import CommentBox from '../CommentBox'
-import CommentList from '../CommentList'
+import App from 'components/App';
+import CommentBox from 'components/CommentBox'
+import CommentList from 'components/CommentList' 
+
+let wrapped;//declaire first to be accessible
+
+beforeEach(()=> {
+  wrapped = shallow(< App />) //reassign wrapped,
+}) //common logic to be resued, it needs to occure before each test.  
 
 it ('shows a comment box', () => {
-  const wrapped = shallow(< App />);
   expect(wrapped.find(CommentBox).length).toEqual(1); 
-  // find all instances of CommentBox and it equals 1
+  // find all instances of CommentBox(array length) equals 1
 })
 
 it ('shows a comment list', () => {
-  const wrapped = shallow(< App />);
   expect(wrapped.find(CommentList).length).toEqual(1); 
-  // find all instances of CommentBox and it equals 1
 })

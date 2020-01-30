@@ -21,7 +21,18 @@ imported and configured in setupTests.js
 - Shallow: Render just the given compoenent NOT children
 - FullDOM: render compoenent + all of its children + allows modify afterwards
 
-
+### Alsolute imports
+Allows to import components with absolute paths. 
+https://create-react-app.dev/docs/importing-a-component/#absolute-imports
+Create jsconfig.json in root of the project, copy the following code and restart the server. 
+```
+{
+  "compilerOptions": {
+    "baseUrl": "src"
+  },
+  "include": ["src"]
+}
+```
 
 
 
