@@ -18,7 +18,7 @@ imported and configured in setupTests.js
 
 ### Enzyme API
 - Static: render the given component and return plain HTM:
-- Shallow: Render just the given compoenent NOT children
+- Shallow: Render just the given component NOT children
 - FullDOM: render compoenent + all of its children + allows modify afterwards
 
 ### Absolute imports
